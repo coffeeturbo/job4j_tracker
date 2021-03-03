@@ -12,7 +12,7 @@ public class FindItemByIdActionStrategy implements UserActionStrategy {
 
     @Override
     public boolean execute(Input input, Store tracker) {
-        String id = input.askStr("Enter id: ");
+        Integer id = input.askInt("Enter id: ");
 
         Item item = tracker.findById(id);
         if (item != null) {

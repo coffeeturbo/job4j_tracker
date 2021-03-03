@@ -12,7 +12,7 @@ public class DeleteItemActionStrategy implements UserActionStrategy {
     @Override
     public boolean execute(Input input, Store tracker) {
         System.out.println(name());
-        String id = input.askStr("Enter id: ");
+        Integer id = input.askInt("Enter id: ");
 
         if (tracker.delete(id)) {
             System.out.println("positionId: " + id + " Успешно удалена!");

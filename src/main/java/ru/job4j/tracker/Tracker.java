@@ -27,7 +27,6 @@ public class Tracker implements Store {
         return item;
     }
 
-
     /**
      * Find all list.
      *
@@ -54,14 +53,13 @@ public class Tracker implements Store {
         return itemsByNames;
     }
 
-
     /**
      * Find by id item.
      *
      * @param id the id
      * @return the item
      */
-    public Item findById(String id) {
+    public Item findById(Integer id) {
         Item resultItem = null;
         for (Item item: items) {
             if (item.getId().equals(id)) {
@@ -78,13 +76,12 @@ public class Tracker implements Store {
      * @param item the item
      * @return the boolean
      */
-    public boolean replace(String id, Item item) {
+    public boolean replace(Integer id, Item item) {
         boolean result = false;
-        int index = indexOf(id);
 
-        if (index >= 0) {
+        if (id >= 0) {
             item.setId(id);
-            items.set(index, item);
+            items.set(id, item);
             result = true;
         }
 
@@ -98,7 +95,7 @@ public class Tracker implements Store {
      * @param id the id
      * @return the boolean
      */
-    public boolean delete(String id) {
+    public boolean delete(Integer id) {
         boolean result = false;
         Item item = findById(id);
         if (item != null) {
@@ -108,26 +105,14 @@ public class Tracker implements Store {
         return result;
     }
 
-    private int indexOf(String id) {
-        int rsl = -1;
-
-        for (Item item: items) {
-            if (item.getId().equals(id)) {
-                rsl = items.indexOf(item);
-                break;
-            }
-        }
-        return rsl;
-    }
-
     /**
      * Метод генерирует уникальный ключ для заявки.
      * Так как у заявки нет уникальности полей, имени и описание. Для идентификации нам нужен уникальный ключ.
      * @return Уникальный ключ.
      */
-    private String generateId() {
+    private Integer generateId() {
         Random rm = new Random();
-        return String.valueOf(rm.nextLong() + System.currentTimeMillis());
+        return Integer.parseInt(String.valueOf(rm.nextLong() + System.currentTimeMillis()));
     }
 
     @Override
