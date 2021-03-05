@@ -81,7 +81,8 @@ public class Tracker implements Store {
 
         if (id >= 0) {
             item.setId(id);
-            items.set(id, item);
+            var index = items.indexOf(findById(id));
+            items.set(index, item);
             result = true;
         }
 
@@ -112,11 +113,11 @@ public class Tracker implements Store {
      */
     private Integer generateId() {
         Random rm = new Random();
-        return Integer.parseInt(String.valueOf(rm.nextLong() + System.currentTimeMillis()));
+        return Math.abs(rm.nextInt());
     }
 
     @Override
     public void close() throws Exception {
-
+        throw new Exception();
     }
 }

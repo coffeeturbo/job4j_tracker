@@ -1,4 +1,4 @@
-[![Build Status](https://www.travis-ci.com/coffeeturbo/job4j_tracker.svg?branch=main)](https://www.travis-ci.com/coffeeturbo/job4j_tracker) 
+[![Build Status](https://www.travis-ci.com/coffeeturbo/job4j_tracker.svg?branch=master)](https://www.travis-ci.com/coffeeturbo/job4j_tracker)
 [![codecov](https://codecov.io/gh/coffeeturbo/job4j_tracker/branch/master/graph/badge.svg?token=M8WLH6V301)](https://codecov.io/gh/coffeeturbo/job4j_tracker)
 
 # job4j_tracker
