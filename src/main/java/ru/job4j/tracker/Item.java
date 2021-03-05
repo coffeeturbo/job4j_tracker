@@ -1,6 +1,7 @@
 package ru.job4j.tracker;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Objects;
 
 @Entity
@@ -11,6 +12,8 @@ public class Item implements Comparable<Item> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    private String descripion;
+    private Timestamp created;
 
     public Item() {
 
@@ -22,6 +25,12 @@ public class Item implements Comparable<Item> {
     public Item(Integer id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Item(String name, String descripion, Timestamp created) {
+        this.name = name;
+        this.descripion = descripion;
+        this.created = created;
     }
 
     @Override
