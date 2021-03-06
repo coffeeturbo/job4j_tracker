@@ -118,9 +118,4 @@ public class Tracker implements Store {
         Random rm = new Random();
         return Math.abs(rm.nextInt());
     }
-
-    @Override
-    public void close() throws Exception {
-        throw new Exception();
-    }
 }
