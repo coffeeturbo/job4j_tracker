@@ -1,7 +1,7 @@
-package ru.job4j.tracker.sql;
+package ru.job4j.tracker.store.sql;
 
-import ru.job4j.tracker.Item;
-import ru.job4j.tracker.Store;
+import ru.job4j.tracker.model.Item;
+import ru.job4j.tracker.store.Store;
 
 import java.io.InputStream;
 import java.sql.*;

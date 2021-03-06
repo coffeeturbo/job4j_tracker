@@ -1,6 +1,7 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.strategy;
 
 import ru.job4j.tracker.input.Input;
+import ru.job4j.tracker.store.Store;
 import ru.job4j.tracker.strategy.UserActionStrategy;
 
 public class StubAction implements UserActionStrategy {

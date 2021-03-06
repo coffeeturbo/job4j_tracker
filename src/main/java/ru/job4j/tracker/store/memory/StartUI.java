@@ -1,8 +1,9 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.store.memory;
 
 import ru.job4j.tracker.input.ConsoleInput;
 import ru.job4j.tracker.input.Input;
 import ru.job4j.tracker.input.ValidateInput;
+import ru.job4j.tracker.store.Store;
 import ru.job4j.tracker.strategy.*;
 
 import java.util.Arrays;

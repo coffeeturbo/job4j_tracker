@@ -1,8 +1,8 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.store.sql;
 
+import org.junit.Assert;
 import org.junit.Test;
-import ru.job4j.tracker.sql.ConnectionRollback;
-import ru.job4j.tracker.sql.SqlTracker;
+import ru.job4j.tracker.model.Item;
 
 import java.io.InputStream;
 import java.sql.Connection;
@@ -10,7 +10,7 @@ import java.sql.DriverManager;
 import java.util.Properties;
 
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class SqlTrackerTest {
     private Connection init() {
@@ -56,7 +56,7 @@ public class SqlTrackerTest {
     @Test
     public void whenFindByIdFalse() throws Exception {
         try (SqlTracker tracker = new SqlTracker(ConnectionRollback.create(this.init()))) {
-            assertNull(tracker.findById(1223213));
+            Assert.assertNull(tracker.findById(1223213));
         }
     }
 

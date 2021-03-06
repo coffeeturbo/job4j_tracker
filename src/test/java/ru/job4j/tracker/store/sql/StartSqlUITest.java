@@ -1,13 +1,13 @@
-package ru.job4j.tracker;
+package ru.job4j.tracker.store.sql;
 
 import org.junit.Assert;
 import org.junit.Test;
 import ru.job4j.tracker.input.Input;
 import ru.job4j.tracker.input.StubInput;
-import ru.job4j.tracker.strategy.CreateActionStrategy;
-import ru.job4j.tracker.strategy.DeleteItemActionStrategy;
-import ru.job4j.tracker.strategy.ReplaceItemActionStrategy;
-import ru.job4j.tracker.strategy.UserActionStrategy;
+import ru.job4j.tracker.model.Item;
+import ru.job4j.tracker.store.memory.StartUI;
+import ru.job4j.tracker.store.memory.Tracker;
+import ru.job4j.tracker.strategy.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -17,7 +17,7 @@ import java.util.StringJoiner;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class StartUITest {
+public class StartSqlUITest {
     @Test
     public void init() {
 

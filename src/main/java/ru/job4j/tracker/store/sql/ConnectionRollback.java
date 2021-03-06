@@ -1,4 +1,4 @@
-package ru.job4j.tracker.sql;
+package ru.job4j.tracker.store.sql;
 
 import java.lang.reflect.Proxy;
 import java.sql.Connection;

@@ -1,7 +1,7 @@
-package ru.job4j.tracker.sql;
+package ru.job4j.tracker.store.sql;
 
 
-import ru.job4j.tracker.Store;
+import ru.job4j.tracker.store.Store;
 import ru.job4j.tracker.input.ConsoleInput;
 import ru.job4j.tracker.input.Input;
 import ru.job4j.tracker.input.ValidateInput;
@@ -10,7 +10,7 @@ import ru.job4j.tracker.strategy.*;
 import java.util.Arrays;
 import java.util.List;
 
-public class StartUI {
+public class StartSqlUI {
 
     public void init(Input input, Store tracker, List<UserActionStrategy> actions) {
         boolean run = true;
@@ -45,6 +45,6 @@ public class StartUI {
             new FindItemByNameActionStrategy()
         );
 
-        new StartUI().init(scanner, tracker, actionsList);
+        new StartSqlUI().init(scanner, tracker, actionsList);
     }
 }

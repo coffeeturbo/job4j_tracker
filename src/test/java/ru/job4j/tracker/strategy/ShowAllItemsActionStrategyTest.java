@@ -1,8 +1,8 @@
 package ru.job4j.tracker.strategy;
 
 import org.junit.Test;
-import ru.job4j.tracker.Item;
-import ru.job4j.tracker.Tracker;
+import ru.job4j.tracker.model.Item;
+import ru.job4j.tracker.store.memory.Tracker;
 import ru.job4j.tracker.input.StubInput;
 
 import java.io.ByteArrayOutputStream;
