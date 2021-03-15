@@ -25,7 +25,11 @@ public class Tracker implements Store {
      * @return the item
      */
     public Item add(Item item) {
-        item.setId(this.generateId());
+        if (item.getId() == null || item.getId() == 0) {
+            item.setId(this.generateId());
+        }
+
+
         items.add(item);
         return item;
     }
