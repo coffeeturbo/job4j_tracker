@@ -1,9 +1,18 @@
 package ru.job4j.tracker.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Objects;
 
+@Data
+@NoArgsConstructor()
+@AllArgsConstructor()
+@Builder(toBuilder = true)
 @Entity
 @Table(name = "item")
 public class Item implements Comparable<Item> {
@@ -15,9 +24,6 @@ public class Item implements Comparable<Item> {
     private String descripion;
     private Timestamp created;
 
-    public Item() {
-
-    }
     public Item(String name) {
         this.name = name;
     }
